@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Oswald:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dual Input</title>
+<link rel="icon" href="/assets/logo-id24.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/logo-id24.png">
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/global.css">
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+  
+  <header class="header">
+
+  <div class="logo">
+        <img src="/assets/logo-id24.png" alt="ID24 Logo">
+    </div>
+
+    <nav class="nav">
+      <a href="#Solutions" class="nav-link">Solutions</a>
+      <a href="#Hardware" class="nav-link">Hardware</a>
+      <a href="#Software" class="nav-link">Software</a>
+      <a href="#AI & Security" class="nav-link">AI &amp; Security</a>
+      <a href="#About" class="nav-link">About us</a>
+      <a href="#Contact Us" class="nav-link">Contact us</a>
+      
+    </nav>
+
+
+    <div class="language-switcher">
+        <button class="language-button" id="openPopup" aria-expanded="false" aria-haspopup="true">
+            <span class="language-button-inner">
+            <img src="/assets/language-icon.svg" alt="" class="language-icon">
+            <span class="language-code">EN</span>
+            </span>
+        </button>
+
+        <div class="language-popup" id="languagePopup">
+          <a href="/en/dual-input/" class="language-option">
+           English
+          </a>
+
+          <a href="/sv/dual-input/" class="language-option">
+         Swedish
+          </a>
+        </div>
+        
+    </div>
+</header>
+
+<script>
+  const openPopupButton = document.getElementById("openPopup");
+  const langPopup = document.getElementById("languagePopup");
+
+  openPopupButton.addEventListener("click", function () {
+    langPopup.classList.toggle("active");
+
+    const isOpen = langPopup.classList.contains("active");
+    openPopupButton.setAttribute("aria-expanded", isOpen);
+  });
+
+  document.addEventListener("click", function (event) {
+    const switcher = document.querySelector(".language-switcher");
+
+    if (!switcher.contains(event.target)) {
+      langPopup.classList.remove("active");
+      openPopupButton.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>
+
+
+  <section class="hero-content">
+  <div class="hero-inner">
+
+    <div class="hero-left">
+      <p class="hero-eyebrow">Patented Dual Input Technology</p>
+
+      <h1 class="hero-title">
+        Next-generation interactive customer displays
+        for retail, banking, and hotels
+      </h1>
+
+      <p class="hero-text">
+        Unlock your true CRM value. We help global brands automate data collection,
+        increase customer loyalty, and secure transactions with patented "Dual Input" technology
+      </p>
+
+      <div class="cta-group">
+        <button class="CTA button">Start a Pilot Project →</button>
+        <button class="CTA button secondary">Explore Our Hardware Solutions</button>
+      </div>
+      
+      <div class="hero-trust">
+        <span class="trust-item">
+            <span class="trust-check">✓</span>
+            No system changes required
+        </span>
+
+        <span class="trust-item">
+            <span class="trust-check">✓</span>
+            Secure transactions
+        </span>
+
+        <span class="trust-item">
+            <span class="trust-check">✓</span>
+            Enterprise-ready
+        </span>
+    </div>
+
+    </div>
+
+    <div class="hero-right">
+      <div class="product-showcase">
+        <div class="product-device" id="product-device">
+          <img
+            src="/assets/id24-display.png"
+            alt="id24 interactive customer display"
+            class="product-image"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section class="industries-section">
+  <div class="industries-inner">
+    <h2 class="industries-title">Tailored solutions for every industry</h2>
+    <p class="industries-subtitle">
+      Transform customer experiences with industry-specific interactive displays
+    </p>
+
+    <div class="industry-grid">
+      <article class="industry-card">
+        <div class="industry-image-wrapper">
+          <img src="/assets/retail.jpg" alt="Retail display">
+          <span class="industry-badge"><!--35% increase in customer engagement---></span>
+        </div>
+
+        <div class="industry-card-content">
+          <h3>Retail</h3>
+          <p>
+            <!--Enhance in-store experiences with interactive product catalogs, loyalty
+            programs, and seamless checkout.
+            --->
+          </p>
+          <a href="#" class="industry-link">Learn more →</a>
+        </div>
+      </article>
+
+      <article class="industry-card">
+        <div class="industry-image-wrapper">
+          <img src="/assets/banking.jpg" alt="Banking kiosk">
+          <span class="industry-badge"><!--50% reduction in queue times---></span>
+        </div>
+
+        <div class="industry-card-content">
+          <h3>Banking</h3>
+          <p>
+            <!--Streamline banking services with secure self-service kiosks for account
+            management and transactions.
+            --->
+          </p>
+          <a href="#" class="industry-link">Learn more →</a>
+        </div>
+      </article>
+
+      <article class="industry-card">
+        <div class="industry-image-wrapper">
+          <img src="/assets/hotel.jpg" alt="Hotel self-service display">
+          <span class="industry-badge"><!--40% faster check-in process---></span>
+        </div>
+
+        <div class="industry-card-content">
+          <h3>Hotels</h3>
+          <p>
+            <!--Deliver exceptional guest experiences with automated check-in/out, room
+            service ordering, and concierge.
+            -->
+          </p>
+          <a href="#" class="industry-link">Learn more →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+  <section class="systems">
+
+  <div class="systems-header">
+    <h2>Complete hardware & software ecosystem</h2>
+    <p>Everything you need to deliver exceptional customer experiences</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="hardware">Hardware</button>
+    <button class="tab" data-tab="software">Software</button>
+    <button class="tab" data-tab="data">Data & Analytics</button>
+  </div>
+
+  <div class="tab-content active" id="hardware">
+    <div class="content-grid">
+  <div class="content-text">
+    <h3 class="systems-section-title">Enterprise-grade hardware solutions</h3>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3L5 6V11C5 16 8.5 20 12 21C15.5 20 19 16 19 11V6L12 3Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="feature-copy">
+          <h4>Patented Dual Input Technology</h4>
+          <p>Enables simultaneous customer and cashier interaction on the same screen.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M13 2L3 14H11L9 22L21 8H13L13 2Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="feature-copy">
+          <h4>High-performance displays</h4>
+          <p>Interactive 4K touchscreens in multiple sizes for any environment.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="10" width="16" height="10" rx="2"
+              stroke="currentColor"
+              stroke-width="2"/>
+            <path d="M8 10V7C8 5 9.5 3 12 3C14.5 3 16 5 16 7V10"
+              stroke="currentColor"
+              stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="feature-copy">
+          <h4>Integrated NFC &amp; Camera</h4>
+          <p>Built-in NFC payments and camera-based loyalty scanning at checkout.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9"
+              stroke="currentColor"
+              stroke-width="2"/>
+            <path d="M3 12H21M12 3C15 6 15 18 12 21M12 3C9 6 9 18 12 21"
+              stroke="currentColor"
+              stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="feature-copy">
+          <h4>Robust Metal Design</h4>
+          <p>Durable hardware built for demanding environments across all platforms.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-image">
+    <img src="/assets/hardware-display.png" alt="Hardware solution" />
+  </div>
+</div>
+  </div>
+
+
+<div class="tab-content" id="software">
+    <div class="content-grid">
+      <div class="content-text">
+        <h3 class="systems-section-title">Enterprise-grade software solutions?</h3>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon-box">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3L5 6V11C5 16 8.5 20 12 21C15.5 20 19 16 19 11V6L12 3Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="feature-copy">
+              <h4>Seamless POS integration</h4>
+              <p>No system changes required. Fast, risk-free deployment..</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-box">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14H11L9 22L21 8H13L13 2Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="feature-copy">
+              <h4>Scalable modular platform</h4>
+              <p>Over 50 modules tailored to your business needs.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-box">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="10" width="16" height="10" rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"/>
+                <path d="M8 10V7C8 5 9.5 3 12 3C14.5 3 16 5 16 7V10"
+                  stroke="currentColor"
+                  stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="feature-copy">
+              <h4>AI-driven fraud detection </h4>
+              <p>Identifies anomalies and strengthens internal control in real time.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-box">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9"
+                  stroke="currentColor"
+                  stroke-width="2"/>
+                <path d="M3 12H21M12 3C15 6 15 18 12 21M12 3C9 6 9 18 12 21"
+                  stroke="currentColor"
+                  stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="feature-copy">
+              <h4>CRM & engagement engine</h4>
+              <p>Capture data, boost loyalty, and unlock customer insights.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-image">
+        <img src="/assets/hardware-display.png" alt="Hardware solution" />
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="data">
+    <div class="content-grid">
+      <div class="content-text">
+        <h3 class="systems-section-title"></h3>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon-box">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3L5 6V11C5 16 8.5 20 12 21C15.5 20 19 16 19 11V6L12 3Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="feature-copy">
+              <h4>Real-time business insights</h4>
+              <p>Turn POS data into actionable dashboards.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-box">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14H11L9 22L21 8H13L13 2Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="feature-copy">
+              <h4>Customer data enrichment</h4>
+              <p>Capture and complete CRM profiles at checkout.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-box">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="10" width="16" height="10" rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"/>
+                <path d="M8 10V7C8 5 9.5 3 12 3C14.5 3 16 5 16 7V10"
+                  stroke="currentColor"
+                  stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="feature-copy">
+              <h4>Performance & KPI tracking</h4>
+              <p>Measure conversion, loyalty, and engagement.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-box">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9"
+                  stroke="currentColor"
+                  stroke-width="2"/>
+                <path d="M3 12H21M12 3C15 6 15 18 12 21M12 3C9 6 9 18 12 21"
+                  stroke="currentColor"
+                  stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="feature-copy">
+              <h4>Operational optimization</h4>
+              <p>Identify inefficiencies and reduce costs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-image">
+        <img src="/assets/hardware-display.png" alt="Hardware solution" />
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<script>
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+
+      tabs.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+
+      tab.classList.add("active");
+
+      const target = document.getElementById(tab.dataset.tab);
+      target.classList.add("active");
+    });
+  });
+</script>
+
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M27.0803 3.12005C28.9448 2.29332 31.0553 2.29332 32.9198 3.12005L54.4987 12.6885C59.4377 14.8785 57.9258 22.5 52.5523 22.5H7.44765C2.07417 22.5 0.562229 14.8785 5.50118 12.6885L27.0803 3.12005ZM30.9733 7.81912C30.3518 7.54355 29.6483 7.54355 29.0268 7.81912L8.5269 16.9088C8.27995 17.0183 8.3581 17.3873 8.62823 17.3873H51.3718C51.642 17.3873 51.72 17.0183 51.473 16.9088L30.9733 7.81912Z" fill="#0F0F0F"/>
+  <path d="M5 55C5 53.6193 6.1193 52.5 7.5 52.5H52.5C53.8807 52.5 55 53.6193 55 55C55 56.3807 53.8807 57.5 52.5 57.5H7.5C6.1193 57.5 5 56.3807 5 55Z" fill="#0F0F0F"/>
+  <path d="M27.5 47.5C27.5 48.8807 28.6193 50 30 50C31.3807 50 32.5 48.8807 32.5 47.5V27.5C32.5 26.1193 31.3807 25 30 25C28.6193 25 27.5 26.1193 27.5 27.5V47.5Z" fill="#0F0F0F"/>
+  <path d="M15 50C13.6193 50 12.5 48.8807 12.5 47.5V27.5C12.5 26.1193 13.6193 25 15 25C16.3807 25 17.5 26.1193 17.5 27.5V47.5C17.5 48.8807 16.3807 50 15 50Z" fill="#0F0F0F"/>
+  <path d="M42.5 47.5C42.5 48.8807 43.6193 50 45 50C46.3807 50 47.5 48.8807 47.5 47.5V27.5C47.5 26.1193 46.3807 25 45 25C43.6193 25 42.5 26.1193 42.5 27.5V47.5Z" fill="#0F0F0F"/>
+</svg>
+
+  <section class="awards-strip">
+  <div class="awards-heading">
+    <h2 class="awards-heading_title">
+        Over 15 years of experience in 20+ countries.
+    </h2>
+    <p class ="awards-heading_subtitle">
+        Award-winning technology trusted globally
+    </p>
+  </div>
+
+  <div class="awards-strip__grid">
+    <article class="award-chip">
+      <div class="award-chip__icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="8" r="4" stroke="white" stroke-width="2"/>
+          <path d="M8 12L6 22L12 18L18 22L16 12" stroke="white" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="award-chip__text">
+        <h3>AAA Rated</h3>
+        <p>3 Years in a Row</p>
+      </div>
+    </article>
+
+    <article class="award-chip">
+      <div class="award-chip__icon"><span>☆</span></div>
+      <div class="award-chip__text">
+        <h3>EHI Best Customer</h3>
+        <p>Experience</p>
+      </div>
+    </article>
+
+    <article class="award-chip">
+      <div class="award-chip__icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="8" r="4" stroke="white" stroke-width="2"/>
+          <path d="M8 12L6 22L12 18L18 22L16 12" stroke="white" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="award-chip__text">
+        <h3>Retail Innovation</h3>
+        <p>Award</p>
+      </div>
+    </article>
+
+    <article class="award-chip">
+      <div class="award-chip__icon"><span>☆</span></div>
+      <div class="award-chip__text">
+        <h3>UIC Accelerator</h3>
+        <p>2026–2027</p>
+      </div>
+    </article>
+  </div>
+</section>
+  <section class="bottom-cta">
+  <div class="bottom-cta-inner">
+    <h1 class="bottom-cta-title">
+      Ready to transform your customer experience?
+    </h1>
+
+    <p class="bottom-cta-text">
+      Join global brands leveraging id24's patented technology to drive growth and loyalty
+    </p>
+
+    <div class="bottom-cta-buttons">
+      <a href="#" class="bottom-btn bottom-btn-primary">
+        Start Your Pilot Project →
+      </a>
+
+    <p class="bottom-cta-trust">
+      Implementation support included
+    </p>
+    </div>
+  </div>
+</section>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="/assets/logo-id24.png" alt="id24 logo" class="footer-logo">
+          <span class="footer-brand-name">id24</span>
+        </div>
+
+        <p class="footer-description">
+          Next-generation interactive customer displays for retail, banking, and hotels
+        </p>
+
+        <p class="footer-copy">
+          © 2026 id24. All rights reserved.
+        </p>
+      </div>
+
+      <div class="footer-links-group">
+        <h3>Solutions</h3>
+        <a href="#">Retail</a>
+        <a href="#">Banking</a>
+        <a href="#">Hotels</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h3>Products</h3>
+        <a href="#">Hardware</a>
+        <a href="#">Software</a>
+        <a href="#">AI & Security</a>
+        <a href="#">Integrations</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h3>Company</h3>
+        <a href="#">About us</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+        <a href="#">Support</a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+  ---
+layout: layouts/base.njk
+title: Dual Input
+permalink: /dual-input/
+language: english
+---
+
+  <script src="/assets/js/product-display.js"></script>
+</body>
+</html>
